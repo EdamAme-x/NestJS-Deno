@@ -2,12 +2,12 @@ import { Test, TestingModule } from 'npm:@nestjs/testing';
 import { INestApplication } from 'npm:@nestjs/common';
 import * as request from 'npm:supertest';
 import { AppModule } from './../src/app.module.ts';
-import { describe, beforeEach, it } from 'npm:@jest/globals';
+import Jest from 'npm:@jest/globals';
 
-describe('AppController (e2e)', () => {
+Deno.test('AppController (e2e)', () => {
   let app: INestApplication;
 
-  beforeEach(async () => {
+  Jest.beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
@@ -16,7 +16,7 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  Jest.it('/ (GET)', () => {
     return request(app.getHttpServer())
       .get('/')
       .expect(200)
