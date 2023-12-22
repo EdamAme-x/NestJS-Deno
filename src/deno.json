@@ -1,7 +1,8 @@
 {
     "tasks": {
         "start": "deno run -A --unstable ./src/index.ts",
-        "dev": "deno run -A --unstable --watch ./src/index.ts"
+        "dev": "deno run -A --unstable --watch ./src/index.ts",
+        "test": "deno test -A --unstable --node-modules-dir"
     },
     "imports": {
         "@nestjs/": "npm:@nestjs/",
