@@ -1,8 +1,9 @@
 import { Test, TestingModule } from 'npm:@nestjs/testing';
 import { AppController } from './app.controller.ts';
 import { AppService } from './app.service.ts';
+import { describe, beforeEach, it, expect } from 'npm:@jest/globals';
 
-Deno.describe('AppController', () => {
+Deno.test('AppController', () => {
   let appController: AppController;
 
   beforeEach(async () => {
